@@ -11,7 +11,7 @@ Typical forecasting models such as Prophet and ARIMA tend to provide value in th
     
 The aim of this project is to build as good a model as possible to determine the sales performance based off domain knowledge, specifically a portfolio of product features. We can imagine the products are atleisure active apparel clothing items for an e-commerce store. 
 
-**This document outlines topics of the model's methodology, modelling tools and techniques, and provides a summary of results and final discussion points. For a detailed code repository, please see attached Jupyter Notebook.**
+**This document outlines topics of the model's methodology, modelling tools and techniques, and provides a summary of results and final discussion points. For a detailed code repository, please see attached [Jupyter Notebook](https://github.com/kyle-walden/ML-Predicting-Sales-Performance-based-off-Product-Features/blob/master/Predicting%20Sale%20Performance%20using%20Product%20Features%20(1).ipynb) to this repository.**
 
 ## Methodology
 ### Dataset
