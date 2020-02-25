@@ -28,7 +28,13 @@ The chosen model was a multi-linear regression model. Ridge regression and polyn
 
 In scope of feature selection, a standard OLS backwards elimination method was used as well as utalising VIF to address multi-collinearity. Simple feature engineering was conducted on the outcome vairables and time vairable.
 
-## Results and Discussion
+## Results
+The chosen model produced a variance score of 0.95 (i.e. had a 95% accuracy score) and residual sum of squares (RSS) of 462430.80. 
+A distribution plot is produced below:
+
+![__results___33_0.png](__results___33_0.png)
+
+## Discussion
 The chosen model produced a variance score of 0.95 (i.e. had a 95% accuracy score) and residual sum of squares (RSS) of 462430.80. A couple keys to note on how this model was achieved:
 * A final Multi-linear Regression model reported the best results
 * A Ridge Regression and Poly-nomial Regression were explored as possible models, however the model's did not fit sufficiently
