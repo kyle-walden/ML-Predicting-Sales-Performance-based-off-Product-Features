@@ -1,8 +1,8 @@
 # Predicting Sales Performance based off Product Features
-**Document of Works**
+**Project Report**
 
 ## Abstract
-This project utalizes machine learning to develope a multi-linear regression model to predict periodic sales performance based off given product features. A **0.95 variance score** was achieved (i.e. 95% accuracy model). Feature selection and data pre-processing are key to the model's performance.
+This project utalizes machine learning to develope a regression model to predict periodic sales performance based off given product features. The concluding model chosen was a Gradient Boosting Model with a 81% accuracy. Feature selection and data pre-processing are key to the model's performance.
 
 ## Introduction
 In a tangible product environment, whether brick n' mortar or e-commerce, B2B, B2C, or even B2G, strategic decisions need to be formulated and implemented based on the prediction of a product's success. 
@@ -24,22 +24,18 @@ The data was obtained from [this kaggle dataset](https://www.kaggle.com/c/online
 ### Modelling
 The programming language of choice was Python. Numerous libraries were used throughout the coding script, namely Pandas, NumPy, Scikit-Learn, Seaborn, Matplotlib, and Statsmodels.
 
-The chosen model was a multi-linear regression model. Ridge regression and polynomial regression models were explored as possible models, however performance scores were not sufficient. Assumptions of a multi-linear regression model were followed, which can be found [here](https://www.statisticssolutions.com/assumptions-of-multiple-linear-regression/).
-
 In scope of feature selection, a standard OLS backwards elimination method was used as well as utalising VIF to address multi-collinearity. Simple feature engineering was conducted on the outcome vairables and time vairable.
 
+Two regression models were trained to fit the data, namely a [Gradient Boosting Model](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) and [Multi-Linear Regression Model](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)(click to read more on a model's scope).
+
 ## Results
-The chosen model produced a variance score of 0.95 (i.e. had a 95% accuracy score) and residual sum of squares (RSS) of 462430.80. 
-A distribution plot is produced below:
+Both models were tested, with the Gradient Boosting Model (accuracy of 81%) performing better than the Multi-Linear Regression Model (67% accuracy). Several plots are available below to visualise the performance of each model:
 
 ![__results___33_0.png](__results___33_0.png)
+![GBM_Dist_Plot.png](GBM_Dist_Plot.png)
+![ML_Dist_plot.png](ML_Dist_plot.png)
 
 ## Discussion
-The chosen model produced a variance score of 0.95 (i.e. had a 95% accuracy score) and residual sum of squares (RSS) of 462430.80. A couple keys to note on how this model was achieved:
-* A final Multi-linear Regression model reported the best results
-* A Ridge Regression and Poly-nomial Regression were explored as possible models, however the model's did not fit sufficiently
-* Features had to be created based off the initial outcome vairables for each individual month sales, as well as exploring the date feature
-* Feature selection contributed to an increased variance score - we started off with 546 model features and resulted in 78 final product features that explain our model
-* Outlier outcomes were eliminated from the model. A model including outlier's only reported a 67% (or 0.67 variance score)
-* The better-developed model would comprise of more domain knowledge features. Additional product feature data would comprise of inputs from advertising campaign data, customer portfolio data, distribution channels, etc.
-* The model does not consider a product's life-cycle, therefore the imputation of the "number of sales months" coefficient must be considered carefully
+The concluding Gradient Boosting Model explains 81% of a product's sale success. The better-developed model would comprise of more domain knowledge features. Additional product feature data would comprise of inputs from advertising campaign data, customer portfolio data, distribution channels, etc. to strive for a closer-to-one variance score. A couple things to note on the model:
+* The model does not consider a product's life-cycle, therefore the imputation of the "number of sales months" coefficient must be considered carefully with a marketing department.
+* Feature selection contributed to an increased variance score - we started off with 546 model features and resulted in 78 final product features that explain our model.
